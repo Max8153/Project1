@@ -26,3 +26,13 @@ photoElements.forEach((elem, index) => {
     openBigPhoto(index);
   });
 });
+import {getPhotos} from './api.js';
+async function loadPhotos() {
+  try {
+    const photos = await getPhotos();
+    createAllPicElems(picturesContainer, photos);
+  } catch (error) {
+    console.error('Error loading photos:', error);
+  }
+}
+loadPhotos();
