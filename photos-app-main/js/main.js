@@ -29,7 +29,7 @@ for (let i = 1; i <= 25; i++) {
         likes: getRandom(15, 200),
         comments: []
     }
-    const numberOfComments = getRandom(1, 6);
+    const numberOfComments = getRandom(1, 20);
     for (let j = 0; j < numberOfComments; j++) {
         photo.comments.push(getRandomComment());
     }
